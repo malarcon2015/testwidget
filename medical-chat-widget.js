@@ -255,15 +255,15 @@
         }
 
         async sendMessage() {
-            const patientIdInput = this.shadowRoot.querySelector('#mcw-patient-id');
+            //const patientIdInput = this.shadowRoot.querySelector('#mcw-patient-id');
             const queryInput = this.shadowRoot.querySelector('#mcw-query');
             const sendBtn = this.shadowRoot.querySelector('.mcw-send-btn');
             const typingIndicator = this.shadowRoot.querySelector('.mcw-typing');
 
-            const patient_id = patientIdInput.value.trim();
+            //const patient_id = patientIdInput.value.trim();
             const query = queryInput.value.trim();
 
-            if (!patient_id || !query) return;
+            if (!query) return;
 
             this.addMessage('user', query);
             queryInput.value = '';
@@ -278,7 +278,7 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        patient_id: patient_id,
+                        patient_id: '111111',
                         query: query,
                         user_id: 'doctor_chaymae'
                     })

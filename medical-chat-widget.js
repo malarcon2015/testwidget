@@ -20,23 +20,23 @@
         }
 
         .mcw-floating-button {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            background-color: var(--mcw-primary);
+            
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+           
             transition: transform 0.2s ease, background-color 0.2s ease;
-            font-size: 24px;
+            overflow: hidden;
         }
 
         .mcw-floating-button:hover {
-            transform: scale(1.1);
-            background-color: #0ea5e9;
+            transform: scale(1.4);
+            
         }
 
         .mcw-container {
@@ -278,7 +278,7 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        patient_id: '111111',
+                        patient_id: '',
                         query: query,
                         user_id: 'doctor_chaymae'
                     })
@@ -305,11 +305,7 @@
             this.shadowRoot.innerHTML = `
                 <style>${styles}</style>
                 <div class="mcw-floating-button" id="mcw-toggle">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="10" y1="10" x2="14" y2="10"></line>
-                    </svg>
+                    <img src="icon.png" alt="Chat Icon" style="width: 90%; height: 55%; object-fit: cover;">
                 </div>
                 <div class="mcw-container ${this.isOpen ? 'open' : ''}">
                     <div class="mcw-header">

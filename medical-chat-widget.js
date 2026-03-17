@@ -305,7 +305,7 @@
             this.shadowRoot.innerHTML = `
                 <style>${styles}</style>
                 <div class="mcw-floating-button" id="mcw-toggle">
-                    <img src="icon.png" alt="Chat Icon" style="width: 90%; height: 55%; object-fit: cover;">
+                    <img src="logo-Front-Markey.jpeg" alt="Chat Icon" style="width: 90%; height: 55%; object-fit: cover;">
                 </div>
                 <div class="mcw-container ${this.isOpen ? 'open' : ''}">
                     <div class="mcw-header">
